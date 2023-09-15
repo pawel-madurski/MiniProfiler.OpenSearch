@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{16FF3561-A01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F57D62CB-485F-4E7A-9A23-8165941D5F41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.OpenSearch.Core", "samples\Sample.OpenSearch.Core\Sample.OpenSearch.Core.csproj", "{275500BB-7676-4B66-93E3-422EF42A4678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.OpenSearch.Core", "samples\Sample.Opensearch.Core\Sample.OpenSearch.Core.csproj", "{275500BB-7676-4B66-93E3-422EF42A4678}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C0A0C99B-744D-4C56-A53E-E22C51137ADF}"
 EndProject
