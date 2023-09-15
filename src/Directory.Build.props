@@ -1,18 +1,18 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>7.1.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
 
-    <Description>Elasticsearch.Net and NEST client for logging to MiniProfiler.</Description>
+    <Description>OpenSearch.Net and OpenSearch.Client for logging to MiniProfiler.</Description>
     <OutputType>Library</OutputType>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>$(AssemblyName)</PackageId>
-    <PackageTags>MiniProfiler;Elastic;Elasticsearch;ASP.NET;Core;Profiler;Performance</PackageTags>
+    <PackageTags>MiniProfiler;OpenSearch;ASP.NET;Core;Profiler;Performance</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReleaseNotes>See https://github.com/romansp/MiniProfiler.Elasticsearch/releases for more info</PackageReleaseNotes>
+    <PackageReleaseNotes>See https://github.com/pawel-madurski/MiniProfiler.OpenSearch/releases for more info</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 
-    <Authors>Raman Paulau</Authors>
+    <Authors>Paweł Madurski</Authors>
 
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>

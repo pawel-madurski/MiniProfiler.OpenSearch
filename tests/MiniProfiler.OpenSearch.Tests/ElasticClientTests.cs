@@ -1,45 +1,45 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Elasticsearch.Net;
-using Nest;
-using StackExchange.Profiling.Elasticsearch;
+using OpenSearch.Client;
+using OpenSearch.Net;
+using StackExchange.Profiling.OpenSearch;
 using Xunit;
 using StackExchangeMiniProfiler = StackExchange.Profiling.MiniProfiler;
 
-namespace MiniProfiler.Elasticsearch.Tests;
+namespace MiniProfiler.OpenSearch.Tests;
 
-public class ElasticClientTests {
+public class OpenSearchClientTests {
     [Fact]
-    public async Task ElasticCallUnsuccessful_ProfilerTimingErrored() {
+    public async Task OpenSearchCallUnsuccessful_ProfilerTimingErrored() {
         // Arrange
         var connectionPool = new SingleNodeConnectionPool(new Uri("http://non-existing-host.non-existing-tld"));
         var settings = new ConnectionSettings(connectionPool)
             .DefaultIndex("test-index");
 
         var profiler = StackExchangeMiniProfiler.StartNew();
-        var client = new ProfiledElasticClient(settings);
+        var client = new ProfiledOpenSearchClient(settings);
         var person = new { Id = "1" };
 
         // Act
         await client.IndexDocumentAsync(person);
 
         // Assert
-        profiler.Root.CustomTimings.TryGetValue("elasticsearch", out var elasticTimings);
-        Assert.True(elasticTimings![0].Errored);
+        profiler.Root.CustomTimings.TryGetValue("opensearch", out var openSearchTimings);
+        Assert.True(openSearchTimings![0].Errored);
     }
 
     [Fact]
     public async Task DiagnosticListener_IndexDocument_ProfilerIncludesTimings() {
         // Arrange
-        using var listener = new ElasticDiagnosticListener();
+        using var listener = new OpenSearchDiagnosticListener();
         using var foo = DiagnosticListener.AllListeners.Subscribe(listener);
         var connectionPool = new SingleNodeConnectionPool(new Uri("http://localhost:9200"));
         var settings = new ConnectionSettings(connectionPool, new InMemoryConnection())
             .DefaultIndex("test-index");
 
         var profiler = StackExchangeMiniProfiler.StartNew();
-        var client = new ElasticClient(settings);
+        var client = new OpenSearchClient(settings);
         var person = new { Id = "1" };
 
         // Act
@@ -50,14 +50,14 @@ public class ElasticClientTests {
     }
 
     [Fact]
-    public async Task ProfiledElasticClient_IndexDocument_ProfilerIncludesTimings() {
+    public async Task ProfileOpenSearchClient_IndexDocument_ProfilerIncludesTimings() {
         // Arrange
         var connectionPool = new SingleNodeConnectionPool(new Uri("http://localhost:9200"));
         var settings = new ConnectionSettings(connectionPool, new InMemoryConnection())
             .DefaultIndex("test-index");
 
         var profiler = StackExchangeMiniProfiler.StartNew();
-        var client = new ProfiledElasticClient(settings);
+        var client = new ProfiledOpenSearchClient(settings);
         var person = new { Id = "1" };
 
         // Act
@@ -74,7 +74,7 @@ public class ElasticClientTests {
         var settings = new ConnectionConfiguration(connectionPool, new InMemoryConnection());
 
         var profiler = StackExchangeMiniProfiler.StartNew();
-        var client = new ProfiledElasticLowLevelClient(settings);
+        var client = new ProfiledOpenSearchLowLevelClient(settings);
         var person = new { Id = "1" };
 
         // Act
@@ -87,9 +87,9 @@ public class ElasticClientTests {
     private static void AssertTimings(StackExchangeMiniProfiler profiler) {
         var customTimings = profiler.Root.CustomTimings;
         Assert.NotEmpty(customTimings);
-        Assert.True(customTimings.TryGetValue("elasticsearch", out var elasticTimings));
-        Assert.NotEmpty(elasticTimings);
-        Assert.Collection(elasticTimings, timing => {
+        Assert.True(customTimings.TryGetValue("opensearch", out var openSearchTimings));
+        Assert.NotEmpty(openSearchTimings);
+        Assert.Collection(openSearchTimings, timing => {
             Assert.True(timing.DurationMilliseconds > 0);
         });
     }

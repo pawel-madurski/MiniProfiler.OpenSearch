@@ -4,17 +4,17 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Sample.Elasticsearch.Core</RootNamespace>
+    <RootNamespace>Sample.Opensearch.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
-    <PackageReference Include="NEST" Version="7.12.1" />
+    <PackageReference Include="OpenSearch.Client" Version="1.5.0" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MiniProfiler.Elasticsearch\MiniProfiler.Elasticsearch.csproj" />
+    <ProjectReference Include="..\..\src\MiniProfiler.OpenSearch\MiniProfiler.OpenSearch.csproj" />
   </ItemGroup>
 
 </Project>

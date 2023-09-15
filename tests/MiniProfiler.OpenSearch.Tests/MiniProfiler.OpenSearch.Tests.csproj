@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MiniProfiler.Elasticsearch\MiniProfiler.Elasticsearch.csproj" />
+    <ProjectReference Include="..\..\src\MiniProfiler.OpenSearch\MiniProfiler.OpenSearch.csproj" />
   </ItemGroup>
 
 </Project>
