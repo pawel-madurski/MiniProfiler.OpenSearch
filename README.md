@@ -7,9 +7,7 @@ Put your [OpenSearch.Net and OpencSearch.Client](https://github.com/opensearch-p
 [![Build status](https://ci.appveyor.com/api/projects/status/e9axfh54cvn3qqti/branch/main?svg=true)](https://ci.appveyor.com/project/pawel-madurski/miniprofiler-opensearch/branch/main)
 ![Nuget](https://img.shields.io/nuget/v/DexxLab.MiniProfiler.OpenSearch)
 
-
-![profiler-popup](https://user-images.githubusercontent.com/3474842/30780873-de83efd8-a11d-11e7-8735-49dea4a1d4f1.png)
-![profiler-queries](https://user-images.githubusercontent.com/3474842/30780952-edf8adea-a11e-11e7-8d64-c65331f389bf.png)
+![image](https://github.com/pawel-madurski/MiniProfiler.OpenSearch/assets/11866857/74293aab-6ad3-4ee1-8014-908d831b9646)
 
 ## Usage
 You have two options on how to start profiling your OpenSearch requests.
