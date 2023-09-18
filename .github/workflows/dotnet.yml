@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Pack
-      run: dotnet pack src/MiniProfiler.Elasticsearch/MiniProfiler.Elasticsearch.csproj --configuration Release --include-symbols --no-build
+      run: dotnet pack src/MiniProfiler.OpenSearch/MiniProfiler.OpenSearch.csproj --configuration Release --include-symbols --no-build
     - name: Test
       run: dotnet test --configuration Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Coverage

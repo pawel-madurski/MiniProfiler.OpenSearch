@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Nest;
+using OpenSearch.Client;
 using StackExchange.Profiling;
 
-namespace Sample.Elasticsearch.Core.Controllers;
+namespace Sample.OpenSearch.Core.Controllers;
 
 public record Person(string Id, string FirstName, string LastName);
 
 public class HomeController : Controller {
-    private readonly IElasticClient _client;
+    private readonly IOpenSearchClient _client;
 
-    public HomeController(IElasticClient client) {
+    public HomeController(IOpenSearchClient client) {
         _client = client;
     }
 

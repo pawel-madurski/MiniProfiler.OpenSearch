@@ -1,15 +1,15 @@
-using Nest;
+﻿using OpenSearch.Client;
 using StackExchange.Profiling;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 services.AddControllersWithViews();
-services.AddMiniProfiler(options => options.ExcludeElasticAssemblies()).AddElastic();
-services.AddSingleton<IElasticClient>(_ => {
+services.AddMiniProfiler(options => options.ExcludeOpenSearchAssemblies()).AddOpenSearch();
+services.AddSingleton<IOpenSearchClient>(_ => {
     var node = new Uri("http://localhost:9200");
-    var connectionSettings = new ConnectionSettings(node).DefaultIndex("elasticsearch-sample");
-    return new ElasticClient(connectionSettings);
+    var connectionSettings = new ConnectionSettings(node).DefaultIndex("opensearch-sample");
+    return new OpenSearchClient(connectionSettings);
 });
 
 services.Configure<RouteOptions>(options => {

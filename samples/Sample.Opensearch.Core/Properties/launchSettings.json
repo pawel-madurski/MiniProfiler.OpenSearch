@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Sample.Elasticsearch.Core._6": {
+    "Sample.OpenSearch.Core._6": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

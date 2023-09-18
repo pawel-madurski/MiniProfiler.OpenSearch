@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProfiler.Elasticsearch", "src\MiniProfiler.Elasticsearch\MiniProfiler.Elasticsearch.csproj", "{618356CB-5D70-48F3-8B1B-6DA56120E3AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProfiler.OpenSearch", "src\MiniProfiler.OpenSearch\MiniProfiler.OpenSearch.csproj", "{618356CB-5D70-48F3-8B1B-6DA56120E3AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global", "global", "{8991B302-DBA8-4CF8-88D2-5B276C9B37CB}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,11 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{16FF3561-A01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F57D62CB-485F-4E7A-9A23-8165941D5F41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Elasticsearch.Core", "samples\Sample.Elasticsearch.Core\Sample.Elasticsearch.Core.csproj", "{275500BB-7676-4B66-93E3-422EF42A4678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.OpenSearch.Core", "samples\Sample.Opensearch.Core\Sample.OpenSearch.Core.csproj", "{275500BB-7676-4B66-93E3-422EF42A4678}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C0A0C99B-744D-4C56-A53E-E22C51137ADF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProfiler.Elasticsearch.Tests", "tests\MiniProfiler.Elasticsearch.Tests\MiniProfiler.Elasticsearch.Tests.csproj", "{2CD0A79C-D950-44AE-BBEA-ACCD50BEF00E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProfiler.OpenSearch.Tests", "tests\MiniProfiler.OpenSearch.Tests\MiniProfiler.OpenSearch.Tests.csproj", "{2CD0A79C-D950-44AE-BBEA-ACCD50BEF00E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{0A8BCF98-DC77-4CE9-B60B-3760D80E2955}"
 EndProject

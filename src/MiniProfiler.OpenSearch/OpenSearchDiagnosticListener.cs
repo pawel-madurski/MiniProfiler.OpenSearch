@@ -2,17 +2,18 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Elasticsearch.Net;
-using Elasticsearch.Net.Diagnostics;
+using OpenSearch.Client;
+using OpenSearch.Net;
+using OpenSearch.Net.Diagnostics;
 using StackExchange.Profiling.Internal;
-using StackExchange.Profiling.Elasticsearch.Internal;
+using StackExchange.Profiling.OpenSearch.Internal;
 
-namespace StackExchange.Profiling.Elasticsearch;
+namespace StackExchange.Profiling.OpenSearch;
 
 /// <summary>
-/// Diagnostic listener for NEST and Elasticsearch.Net events.
+/// Diagnostic listener for OpenSearch.Net events.
 /// </summary>
-public class ElasticDiagnosticListener : IObserver<DiagnosticListener>, IMiniProfilerDiagnosticListener, IDisposable {
+public class OpenSearchDiagnosticListener : IObserver<DiagnosticListener>, IMiniProfilerDiagnosticListener, IDisposable {
     private bool disposedValue;
     private ConcurrentBag<IDisposable> Disposables { get; } = new ConcurrentBag<IDisposable>();
 
@@ -90,7 +91,7 @@ public class ElasticDiagnosticListener : IObserver<DiagnosticListener>, IMiniPro
     }
 
     private static void WriteToProfiler(string eventName, IApiCallDetails data) {
-        MiniProfilerElasticsearch.HandleResponse(data);
+        MiniProfilerOpenSearch.HandleResponse(data);
     }
 
     private static void WriteToProfiler(string eventName, RequestData data) {
