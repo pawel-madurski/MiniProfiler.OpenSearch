@@ -16,6 +16,7 @@
     <PackageTags>MiniProfiler;OpenSearch;ASP.NET;Core;Profiler;Performance</PackageTags>
     <PackageProjectUrl>https://github.com/pawel-madurski/MiniProfiler.OpenSearch</PackageProjectUrl>
     <PackageReleaseNotes>See hhttps://github.com/pawel-madurski/MiniProfiler.OpenSearch/releases for more info</PackageReleaseNotes>
+    <PackageId>DexxLab.$(AssemblyName)</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
