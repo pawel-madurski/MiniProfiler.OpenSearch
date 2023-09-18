@@ -4,7 +4,9 @@
 
 Put your [OpenSearch.Net and OpencSearch.Client](https://github.com/opensearch-project/opensearch-net) requests timings directly into [MiniProfiler](https://github.com/MiniProfiler/dotnet).
 
-[![Build status](https://ci.appveyor.com/api/projects/status/m15gemuqkcs1rbv4/branch/main?svg=true)](https://ci.appveyor.com/project/romansp/miniprofiler-elasticsearch/branch/main) [![Nuget feed](https://img.shields.io/nuget/vpre/MiniProfiler.Elasticsearch.svg)](https://www.nuget.org/packages/MiniProfiler.Elasticsearch)
+[![Build status](https://ci.appveyor.com/api/projects/status/e9axfh54cvn3qqti/branch/main?svg=true)](https://ci.appveyor.com/project/pawel-madurski/miniprofiler-opensearch/branch/main)
+![Nuget](https://img.shields.io/nuget/v/DexxLab.MiniProfiler.OpenSearch)
+
 
 ![profiler-popup](https://user-images.githubusercontent.com/3474842/30780873-de83efd8-a11d-11e7-8735-49dea4a1d4f1.png)
 ![profiler-queries](https://user-images.githubusercontent.com/3474842/30780952-edf8adea-a11e-11e7-8d64-c65331f389bf.png)
