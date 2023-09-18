@@ -7,7 +7,7 @@ var services = builder.Services;
 services.AddControllersWithViews();
 services.AddMiniProfiler(options => options.ExcludeOpenSearchAssemblies()).AddOpenSearch();
 services.AddSingleton<IOpenSearchClient>(_ => {
-    var node = new Uri("http://localhost:9200");
+    var node = new Uri("http://opensearch.local:9200");
     var connectionSettings = new ConnectionSettings(node).DefaultIndex("opensearch-sample");
     return new OpenSearchClient(connectionSettings);
 });
