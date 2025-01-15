@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
-    <PackageReference Include="OpenSearch.Client" Version="1.5.0" />
+    <PackageReference Include="OpenSearch.Client" Version="1.7.0" />
   </ItemGroup>
 
 
