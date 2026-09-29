@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>1.0.2</VersionPrefix>
+    <VersionPrefix>1.0.3</VersionPrefix>
 
     <Description>OpenSearch.Net and OpenSearch.Client for logging to MiniProfiler.</Description>
     <OutputType>Library</OutputType>
